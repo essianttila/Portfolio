@@ -1,0 +1,8 @@
+/* Palette (default: Mint). Swap via the palette switcher. */
+:root{ --bg:#E3EFDC; --ink:#911500; --accent:#FB441B; --accent2:#9E72CC; --pop:#F0691F; --block:#911500; }
+body{ margin:0; font-family:'Hanken Grotesk',sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg); }
+a{ text-decoration:none; color:inherit; }
+::selection{ background:var(--accent); color:#fff; }
+@keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+.ticker-track{ animation:marquee 30s linear infinite; }
+.hidden{ display:none; }
