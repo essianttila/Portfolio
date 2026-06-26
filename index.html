@@ -12,10 +12,6 @@
 </head>
 <body>
 
-<template id="__bundler_thumbnail">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E3EFDC"/><text x="50" y="62" font-family="Georgia, serif" font-size="46" fill="#911500" text-anchor="middle">EA</text></svg>
-</template>
-
   <div id="lang-en">
     <section class="relative overflow-hidden" style="background:var(--bg);min-height:clamp(640px,94vh,920px);">
       <header class="absolute top-0 left-0 right-0 z-[6] flex justify-between items-center px-10 py-6" style="color:var(--ink);">
@@ -35,6 +31,62 @@
       </div>
       <div class="absolute left-[33%] z-[5] -translate-x-1/2 pointer-events-none" style="top:calc(50% - 23vh);"><span style="font-family:'Caveat',cursive;color:var(--accent);font-size:clamp(44px,8.5vw,120px);text-shadow:0 2px 18px rgba(0,0,0,.18);transform:rotate(-5deg);" class="font-bold leading-none inline-block">Creative</span></div>
       <img src="media/portrait-7889.png" alt="Essi Anttila" class="absolute left-1/2 bottom-0 z-[3] -translate-x-1/2 h-auto object-contain pointer-events-none" style="width:clamp(620px,64vw,1020px);max-height:88vh;filter:drop-shadow(0 18px 30px rgba(0,0,0,.18));" onerror="this.style.display='none'">
+    </section>
+
+    <section class="px-14" style="background:var(--accent2);color:#1c1714;padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px);">
+      <div class="max-w-[1100px] mx-auto">
+        <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(40px,6.4vw,92px);line-height:.96;letter-spacing:-.02em;" class="m-0">Words with <span class="italic" style="color:var(--bg);">flavour.</span><br>Brands with <span class="italic" style="color:var(--bg);">feeling.</span></h2>
+        <p class="text-[19px] leading-relaxed max-w-[54ch] mt-7">I'm Essi – a copywriter and brand designer who gives brands a voice worth craving, and the visual storytelling to make it land.</p>
+        <div class="flex gap-3.5 mt-8 flex-wrap">
+          <a href="#en-work" style="font-family:'Archivo',sans-serif;background:var(--ink);color:#F4ECDB;" class="px-8 py-[15px] rounded-full text-[12px] font-bold tracking-[0.12em] uppercase">See selected work</a>
+          <a href="#en-contact" style="font-family:'Archivo',sans-serif;border:1.5px solid #1c1714;color:#1c1714;" class="px-8 py-[15px] rounded-full text-[12px] font-bold tracking-[0.12em] uppercase">Let's talk</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap overflow-hidden whitespace-nowrap py-6" style="background:var(--block);color:#F2EDE1;">
+      <div class="ticker-track inline-block" style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3.4vw,46px);letter-spacing:.03em;text-transform:uppercase;"><span class="px-[26px]">Brand voice</span><span style="color:var(--pop);">✦</span><span class="px-[26px]">Storytelling</span><span style="color:var(--pop);">✦</span><span class="px-[26px]">Localisation</span><span style="color:var(--pop);">✦</span><span class="px-[26px]">Strategic copy</span><span style="color:var(--pop);">✦</span><span class="px-[26px]">Hospitality insider</span><span style="color:var(--pop);">✦</span></div>
+    </div>
+    
+    <section id="en-about" class="grid gap-14 items-center px-14 py-24" style="grid-template-columns:.9fr 1.1fr;">
+       </section>
+
+    <section id="en-work" class="px-14 pt-2">
+      </section>
+    
+    <section id="en-contact" class="px-14 pt-24 pb-24 text-center">
+        </section>
+  </div>
+
+  <div id="lang-fi" class="hidden">
+     </div>
+
+<script>
+  function setLang(lang) {
+    if (lang === 'fi') {
+      document.getElementById('lang-fi').classList.remove('hidden');
+      document.getElementById('lang-en').classList.add('hidden');
+    } else {
+      document.getElementById('lang-en').classList.remove('hidden');
+      document.getElementById('lang-fi').classList.add('hidden');
+    }
+  }
+
+  // Handle video playback on hover
+  document.querySelectorAll('.work-tile').forEach(tile => {
+    const video = tile.querySelector('video');
+    if (video) {
+      tile.addEventListener('mouseenter', () => {
+        video.play().catch(err => console.log("Video play interrupted:", err));
+      });
+      tile.addEventListener('mouseleave', () => {
+        video.pause();
+      });
+    }
+  });
+</script>
+</body>
+</html>      <img src="media/portrait-7889.png" alt="Essi Anttila" class="absolute left-1/2 bottom-0 z-[3] -translate-x-1/2 h-auto object-contain pointer-events-none" style="width:clamp(620px,64vw,1020px);max-height:88vh;filter:drop-shadow(0 18px 30px rgba(0,0,0,.18));" onerror="this.style.display='none'">
       <div class="absolute z-[4] pointer-events-none" style="font-family:'DM Serif Display',serif;left:calc(50% + clamp(150px,14vw,210px));top:calc(50% - 18vh);color:var(--accent);font-size:clamp(26px,3vw,42px);">✦</div>
       <div class="absolute z-[4] pointer-events-none" style="font-family:'DM Serif Display',serif;left:calc(50% - clamp(150px,15vw,220px));top:calc(50% + 10vh);color:var(--accent);font-size:clamp(18px,2vw,28px);">✦</div>
     </section>
